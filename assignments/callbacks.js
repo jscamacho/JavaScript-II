@@ -33,13 +33,26 @@ function last(arr, cb) {
   // last passes the last item of the array into the callback.
 }
 
-function sumNums(x, y, cb) {
-  // sumNums adds two numbers (x, y) and passes the result to the callback.
-}
 
-function multiplyNums(x, y, cb) {
-  // multiplyNums multiplies two numbers and passes the result to the callback.
+// sumNums adds two numbers (x, y) and passes the result to the callback.
+function sumNums(x, y, cb) {
+  return cb(x, y); 
 }
+function add(num1, num2) {
+  return num1 + num2
+};
+let product = sumNums (2, 3, add);
+console.log (product);
+
+// multiplyNums multiplies two numbers and passes the result to the callback
+function multiplyNums(x, y, cb) {
+  return cb(x, y);
+}
+function multiply(num1, num2) {
+  return num1 * num2
+};
+let secProduct = multiplyNums (2, 5, multiply);
+console.log (secProduct)
 
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
